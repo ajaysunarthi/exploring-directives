@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>rating directive</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+</head>
+
+<body ng-app="App" ng-controller="mainCtrl as vm">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6">
+
+                <label for="ratingValue">Current Rating:</label>
+                <input type="number" ng-model="vm.myValue" min="0" max="{{vm.maxValue}}" class="form-control" id="ratingValue">
+                <label for="maxRating">Max Rating:</label>
+                <input type="number" ng-model="vm.maxValue" min="0" class="form-control" id="maxRating">
+            	
+            	<star-rating rating="vm.myValue" 
+            	max-rating="vm.maxValue" rated="vm.onRatingChange($new, $old)">
+            	</star-rating>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="rating.js"></script>
+</body>
+
+</html>
