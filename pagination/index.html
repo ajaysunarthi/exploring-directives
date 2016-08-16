@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>pagination directive</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+</head>
+
+<body ng-app="App" ng-controller="mainCtrl as vm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6">
+
+                <label for="collectionSize">Collection size: </label>
+                <input type="number" ng-model="vm.items" min="0" class="form-control" id="collectionSize" />
+                
+                <label for="selectedPage">Selected page: </label>
+                <input type="number" ng-model="vm.currentPage" min="0" class="form-control" id="selectedPage" />
+                
+                <label for="itemsPerPage">Items per page: </label>
+                <input type="number" ng-model="vm.itemsPerPage" min="0" class="form-control" id="itemsPerPage" />
+
+                <pagination-directive selected-page="vm.currentPage" collection-size="vm.items" items-per-page="vm.itemsPerPage"></pagination-directive>
+            
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="pagination.js"></script>
+</body>
+
+</html>
