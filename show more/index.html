@@ -1,0 +1,29 @@
+<html data-ng-app="answer">
+	<head>
+		<meta charset="utf-8">
+		<title>Frequently Asked Questions!</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body data-ng-controller="AnswerCtrl">
+		<h1>All the commented answers</h1>
+		<section>
+			<div>
+				<img src="img/frosty.jpg" width="80" height="96" title="Frosty" alt="Frosty"/>
+			</div>
+			<div>
+				<p><b>Frosty</b> Answered... </p>
+				
+				 <p  class="answer" expend-text text="text" max-length="200" ></p>
+				<p class="answer" expend-text text="text2" max-length="50" show-more-string="open me" show-less-string="let me show less"></p> 
+				<p class="answer" expend-text text="text3"></p>
+			</div>
+		</section>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+		<script src="app.js"></script>
+		<script src="expand-text.js"></script>
+		<script src="answer-ctrl.js"></script>
+
+	</body>
+
+</html>

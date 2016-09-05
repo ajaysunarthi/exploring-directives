@@ -16,7 +16,7 @@ angular.module('directiveWorkshop').directive('pending', function() {
         // transclude: true,
         // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
         link: function(scope, iElm, iAttrs) {
-            console.log(iElm);
+            
             iElm.on('click', function() {
 
                 iElm.html('<img src="loading.gif" height="10px">').prop('disabled', true);

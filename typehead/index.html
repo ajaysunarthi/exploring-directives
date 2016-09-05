@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="typeahead">
+
+<head>
+    <meta charset="UTF-8">
+    <title>typeahead</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainCtrl as ctrl">
+    
+	<typer items="ctrl.items" prompt="Start typing a US state" title="name" subtitle="abbreviation" model="ctrl.name" on-select="ctrl.onItemSelected()" ></typer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="factory.js"></script> 
+    <script src="directive.js"></script> 
+</body>
+
+</html>
+
+
+  
